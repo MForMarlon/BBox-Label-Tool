@@ -64,9 +64,9 @@ class LabelTool():
         self.mainPanel = Canvas(self.frame, cursor='tcross')
         self.mainPanel.bind("<Button-1>", self.mouseClick)
         self.mainPanel.bind("<Motion>", self.mouseMove)
-        self.parent.bind("<Escape>", self.cancelBBox)  # press <Espace> to cancel current bbox
+        self.parent.bind("<Escape>", self.cancelBBox)  # press <Escape> to cancel current bbox
         self.parent.bind("s", self.cancelBBox)
-        self.parent.bind("a", self.prevImage) # press 'a' to go backforward
+        self.parent.bind("a", self.prevImage) # press 'a' to go backward
         self.parent.bind("d", self.nextImage) # press 'd' to go forward
         self.mainPanel.grid(row = 1, column = 1, rowspan = 4, sticky = W+N)
 
@@ -96,7 +96,7 @@ class LabelTool():
         self.goBtn = Button(self.ctrPanel, text = 'Go', command = self.gotoImage)
         self.goBtn.pack(side = LEFT)
 
-        # example pannel for illustration
+        # example panel for illustration
         self.egPanel = Frame(self.frame, border = 10)
         self.egPanel.grid(row = 1, column = 0, rowspan = 5, sticky = N)
         self.tmpLabel2 = Label(self.egPanel, text = "Examples:")
